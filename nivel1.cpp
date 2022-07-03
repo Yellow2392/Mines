@@ -96,3 +96,4 @@ void Nivel1::print(){
     cout <<tablero1[5][0] << "-----" << tablero1[5][1] << "-----" << tablero1[5][2] << "-----" << tablero1[5][3] << "-----" << tablero1[5][4] << "-----" << tablero1[5][5] << endl;
 
 }
+

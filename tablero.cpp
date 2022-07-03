@@ -107,7 +107,8 @@ void Tablero::elegir2(int x,int y){
 }
 
 bool Tablero::gano(){
-    if(casillas == 1){
+  //6 por el numero de minas que tiene
+    if(casillas == 6){
         return true;
     }
     return false;
@@ -131,5 +132,5 @@ Tablero::~Tablero(){
 }
 
 void Tablero::colocarBandera(int x, int y){
-  tablero1[x-1][y-1]='+';
+  tablero1[x-1][y-1]='P';
 }
