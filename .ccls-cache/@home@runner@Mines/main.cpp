@@ -36,7 +36,7 @@ int result;
         }
         bool mina = tablero ->casilla_mina(x-1,y-1);
         if(mina){
-            cout<<"Perdiste :(";
+            cout<<"Perdiste :("<<endl;
             break;
         }
         tablero -> print();
