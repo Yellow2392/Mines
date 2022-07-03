@@ -108,16 +108,13 @@ void Tablero::elegir2(int x,int y){
 
 bool Tablero::gano(){
   //6 por el numero de minas que tiene
-    if(casillas == 6){
-        return true;
-    }
-    return false;
+    return true;
 }
 
 bool Tablero::es_posible_elegir(){
     for(int i=0;i<X;i++){
         for(int j=0;j<Y;j++){
-            if(tablero[i][j] == '0')
+            if(tablero1[i][j] == '#')
                 return true;
             }
         }
