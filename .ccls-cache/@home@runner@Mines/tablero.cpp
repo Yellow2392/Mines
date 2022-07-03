@@ -1,4 +1,9 @@
 #include "tablero.h"
+bool isValidPos(int i, int j, int X, int Y){
+  if ((i>=0 && j>=0) && (i<=X && j<=Y))
+    return true;
+  return false;
+  }
 
 bool Tablero::elegir_casilla(int x, int y){
     if( x>=X || y >= Y) return false;
@@ -12,7 +17,7 @@ bool Tablero::elegir_casilla(int x, int y){
 
 bool Tablero::casilla_mina(int x, int y) {
     if( x>=X || y >= Y) return false;
-    if(tablero[x][y] == '1'){
+    if(tablero[x][y] == '*'){
         elegir2(x,y);
         return true;
     } else{
@@ -22,11 +27,74 @@ bool Tablero::casilla_mina(int x, int y) {
 
 void Tablero::elegir(int x, int y){
     casillas--;
-    tablero[x][y] = '+';
+  //Aqui
+    int n=0;
+  if (isValidPos(x-1,y-1,X,Y)){
+    if (tablero[x-1][y-1]=='*')
+        n++;
+    }
+  if (isValidPos(x-1,y,X,Y)){
+    if (tablero[x-1][y]=='*')
+        n++;
+    }
+  if (isValidPos(x-1,y+1,X,Y)){
+    if (tablero[x-1][y+1]=='*')
+        n++;
+    }
+  if (isValidPos(x,y-1,X,Y)){
+    if (tablero[x][y-1]=='*')
+        n++;
+    }
+  if (isValidPos(x,y+1,X,Y)){
+    if (tablero[x][y+1]=='*')
+        n++;
+    }
+  if (isValidPos(x+1,y-1,X,Y)){
+    if (tablero[x+1][y-1]=='*')
+        n++;
+    }
+  if (isValidPos(x+1,y,X,Y)){
+    if (tablero[x+1][y]=='*')
+        n++;
+    }
+  if (isValidPos(x+1,y+1,X,Y)){
+    if (tablero[x+1][y+1]=='*')
+        n++;
+    }
+    switch (n){
+      case 1:
+      tablero[x][y] = '1';
+      break;
+      case 2:
+      tablero[x][y] = '2';
+      break;
+      case 3:
+      tablero[x][y] = '3';
+      break;
+      case 4:
+      tablero[x][y] = '4';
+      break;
+      case 5:
+      tablero[x][y] = '5';
+      break;
+      case 6:
+      tablero[x][y] = '6';
+      break;
+      case 7:
+      tablero[x][y] = '7';
+      break;
+      case 8:
+      tablero[x][y] = '8';
+      break;
+      default:
+      tablero[x][y] = '0';
+      break;
+    }
+    //tablero[x][y] = '+';
 }
 void Tablero::elegir2(int x,int y){
     casillas--;
-    tablero[x][y] = '1';
+    tablero[x][y] = '*';
 }
 
 bool Tablero::gano(){

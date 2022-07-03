@@ -24,11 +24,11 @@ Nivel1::Nivel1(){
   for (int i=0;i<6;i++){
     int randX=(rand() % 6);
     int randY=(rand() % 6);
-    while (nivel1[randX][randY]=='1'){
+    while (nivel1[randX][randY]=='*'){
       int randX=(rand() % 6);
       int randY=(rand() % 6);
     }
-    nivel1[randX][randY]='1';
+    nivel1[randX][randY]='*';
   }
   
   

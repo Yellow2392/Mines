@@ -1,10 +1,15 @@
 #ifndef PROYECTO_TABLERO_H
 #define PROYECTO_TABLERO_H
 
+#include <iostream>
 #include <cmath>
 #include <iomanip>
 #include <ctime>
 #include <cstdlib>
+
+
+bool isValidPos(int i, int j);
+
 class Tablero {
 protected:
     int casillas = 0;
@@ -22,6 +27,8 @@ public:
     bool casilla_mina(int x,int y);
     bool gano();
     bool es_posible_elegir();
+
 };
+
 
 #endif //PROYECTO_TABLERO_H
