@@ -96,7 +96,7 @@ void Tablero::elegir(int x, int y){
       break;
       default:
       tablero[x][y] = '0';
-      tablero1[x][y] = '0';
+      tablero1[x][y] = ' ';
       break;
     }
     //tablero[x][y] = '+';
@@ -128,4 +128,8 @@ Tablero::~Tablero(){
         delete[] tablero[i];
     }
     delete[] tablero;
+}
+
+void Tablero::colocarBandera(int x, int y){
+  tablero1[x-1][y-1]='+';
 }

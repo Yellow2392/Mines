@@ -27,6 +27,25 @@ int result;
         cout<<"\n"<<"Casillas restantes: "<<tablero->get_casillas()<<"\n";
         int x,y;
         cout<<"\n";
+
+      //Funcion de banderas va aqui
+      cout<<"Quiere colocar banderas?"<<endl;
+      cout<<"1. Si | 2. No"<<endl;
+      int r;
+      cin>>r;
+      while (r!=1 && r!=2){
+        cout<<"Quiere colocar banderas?"<<endl;
+        cout<<"1. Si | 2. No"<<endl;
+        cin>>r;
+      }
+      if (r==1){
+        cout<<"Ingrese la casilla donde la quiere colocar (fila, columna): ";
+        int x1,y1;
+        cin>>x1>>y1;
+        cout<<endl;
+        tablero->colocarBandera(x1,y1);
+      }
+      //End de la funcion
         cout<<"Ingrese la casilla que quiere buscar(fila, columna): ";
         cin>>x>>y;
         cout<<"\n";
