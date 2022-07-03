@@ -25,7 +25,7 @@ public:
     bool elegir_casilla(int x, int y);
     virtual void print()=0;
     bool casilla_mina(int x,int y);
-    bool gano();
+    bool gano(bool f);
     bool es_posible_elegir();
     void colocarBandera(int x, int y);
 };

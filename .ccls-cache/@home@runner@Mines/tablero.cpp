@@ -95,7 +95,7 @@ void Tablero::elegir(int x, int y){
       tablero1[x][y] = '8';
       break;
       default:
-      tablero[x][y] = '0';
+      tablero[x][y] = ' ';
       tablero1[x][y] = ' ';
       break;
     }
@@ -106,15 +106,18 @@ void Tablero::elegir2(int x,int y){
     tablero[x][y] = '*';
 }
 
-bool Tablero::gano(){
+bool Tablero::gano(bool f){
   //6 por el numero de minas que tiene
+  if (f==true)
+    return false;
+  else
     return true;
 }
 
 bool Tablero::es_posible_elegir(){
     for(int i=0;i<X;i++){
         for(int j=0;j<Y;j++){
-            if(tablero1[i][j] == '#')
+            if(tablero[i][j] == '0')
                 return true;
             }
         }

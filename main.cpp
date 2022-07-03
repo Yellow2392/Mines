@@ -23,6 +23,7 @@ int result;
             break;
     }
     tablero ->print();
+    bool fail=false;
     while(tablero -> es_posible_elegir()){
         cout<<"\n"<<"Casillas restantes: "<<tablero->get_casillas()<<"\n";
         int x,y;
@@ -56,12 +57,13 @@ int result;
         bool mina = tablero ->casilla_mina(x-1,y-1);
         if(mina){
             cout<<"Perdiste :("<<endl;
+            fail=true;
             break;
         }
         tablero -> print();
 
     }
-    if(tablero->gano()){
+    if(tablero->gano(fail)){
         cout<<"!Felicidades, ha completado el juego"<<endl;
     } else {
         return 0;
