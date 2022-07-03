@@ -1,6 +1,6 @@
 
-#ifndef PROYECTO_NIVEL1_H
-#define PROYECTO_NIVEL1_H
+#ifndef PROYECTO_NIVEL2_H
+#define PROYECTO_NIVEL2_H
 
 #include "tablero.h"
 
@@ -10,4 +10,4 @@ public:
     void print() override;
 };
 
-#endif //PROYECTO_NIVEL1_H
+#endif //PROYECTO_NIVEL2_H
