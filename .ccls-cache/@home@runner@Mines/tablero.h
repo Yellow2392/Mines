@@ -10,6 +10,7 @@
 
 bool isValidPos(int i, int j);
 
+
 class Tablero {
 protected:
     int casillas = 0;
@@ -28,6 +29,7 @@ public:
     bool gano(bool f);
     bool es_posible_elegir();
     void colocarBandera(int x, int y);
+    void asignar_a_valorCercano(int x, int y);
 };
 
 
