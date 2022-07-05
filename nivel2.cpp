@@ -24,7 +24,7 @@ Nivel2::Nivel2(){
             nivel2[i][j]='0';
             }
           else{
-            nivel2[][]='|';
+            nivel2[i][j]='|';
           }
         }
     }

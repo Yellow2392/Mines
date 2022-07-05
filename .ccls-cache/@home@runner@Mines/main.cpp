@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-int result;
+    int result;
     do{
         cout<<endl<<"Menu - Juego Buscaminas"<<endl;
         cout<<"--------------------------------"<<endl;
