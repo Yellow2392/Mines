@@ -7,6 +7,8 @@
 #include "nivel1.h"
 #include "nivel2.h"
 #include "nivel3.h"
+#include "cruz.h"
+#include "diamante.h"
 
 using namespace std;
 
@@ -55,7 +57,7 @@ void registro(int n, string jugador){
     }
     archivo.close();
   }
-    //Si no lo encuentra, registrara el nombre
+  //Si no lo encuentra, registrara el nombre
   else{
     ofstream archivo("scores.txt",fstream::app);
     archivo<<jugador<<" "<<n<<endl;
@@ -66,6 +68,7 @@ void registro(int n, string jugador){
 
 int main() {
     int result;
+    int selec;
     do{
         cout<<endl<<"Menu - Juego Buscaminas"<<endl;
         cout<<"--------------------------------"<<endl;
@@ -77,7 +80,7 @@ int main() {
         cout<<"0. Salir del Juego"<<endl;
         cin>>result;
         cout<<"\n";
-    } while (result >= 4 or result <0);
+    } while (result >= 5 or result <0);
     if(result == 0){cout<<"Gracias por jugar!"; return 0;}
     Tablero* tablero=nullptr;
     switch(result){
@@ -90,7 +93,30 @@ int main() {
         case 3:
             tablero = new Nivel3();
             break;
-    }
+        case 4: 
+              do{
+                  cout<<endl<<"Menu - Perzonalizado"<<endl;
+                  cout<<"--------------------------------"<<endl;
+                  cout<<"1. Perzonalizar Tamaño"<<endl;
+                  cout<<"2. Nivel Cruz"<<endl;
+                  cout<<"3. Nivel Diamante"<<endl;
+                  cout<<"--------------------------------"<<endl;
+                  cout<<"0. Salir del Juego"<<endl;
+                  cin>>selec;
+                  cout<<"\n";
+              } while (selec >= 4 or result <0);
+              if(selec==0){cout<<"Gracias por jugar!"; return 0;}
+              switch(selec){
+                  case 1:
+                      cout<<"Escogio nivel perzonalizable!"<<endl;
+                      break;
+                  case 2:
+                      tablero = new NivelCruz();
+                      break;
+                  case 3:
+                      tablero = new NivelDiamante();
+                      break;
+                 }             
     cout<<"Ingrese su nombre (No debe contener espacios): ";
     string jugador;
     int victoria=0;
@@ -151,3 +177,4 @@ int main() {
     }
     return 0;
 }
+  }
