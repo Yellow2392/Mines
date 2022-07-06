@@ -1,10 +1,68 @@
 #include <iostream>
+#include <string>
+#include <fstream>
+#include <sstream>
+#include <vector>
 #include "tablero.h"
 #include "nivel1.h"
 #include "nivel2.h"
 #include "nivel3.h"
 
 using namespace std;
+
+void registro(int n, string jugador){
+  //Se debe leer el archivo primero para verificar que el
+  //el nombre no haya estado antes
+  ifstream archivoOp("scores.txt");
+  string line,line1;
+  bool flag=false;
+  while (getline(archivoOp, line)) {
+    auto found = line.find(jugador);
+    if (found!=std::string::npos){
+      flag=true;
+      break;
+    }
+}
+  archivoOp.close();
+  //Si se encontro el nombre del jugador, actualizara
+  //el contador de victorias
+  if (flag==true){
+    fstream archivo("scores.txt",fstream::app);
+    string line1;
+    while (!archivo.eof()){
+      std::getline(archivo,line1);
+      auto found = line1.find(jugador);
+      if (found!=std::string::npos){
+        //Error esta aca. No agrega elementos al vector
+        vector <string> words;
+        istringstream iss(line1);
+        do
+        {
+            string subs;
+            iss >> subs;
+            words.push_back(subs);
+        } while (iss);
+        words.pop_back();
+        for (auto &c:words){
+          cout<<c<<endl;
+        }
+        int new_n = stoi(words[1]);
+        new_n=new_n+n;
+        string Sn=to_string(new_n);
+      line1.replace(line1.find(words[1]),words[1].length(),Sn);
+      }
+      
+    }
+    archivo.close();
+  }
+    //Si no lo encuentra, registrara el nombre
+  else{
+    ofstream archivo("scores.txt",fstream::app);
+    archivo<<jugador<<" "<<n<<endl;
+    archivo.close();
+  }
+  
+}
 
 int main() {
     int result;
@@ -33,6 +91,12 @@ int main() {
             tablero = new Nivel3();
             break;
     }
+    cout<<"Ingrese su nombre (No debe contener espacios): ";
+    string jugador;
+    int victoria=0;
+    cin>>jugador;
+    //Agregar condicion para los espacios
+    cout<<endl;
     tablero ->print();
     bool fail=false;
     while(tablero -> es_posible_elegir()){
@@ -78,6 +142,10 @@ int main() {
     }
     if(tablero->gano(fail)){
         cout<<"!Felicidades, ha completado el juego"<<endl;
+      victoria++;
+      //Registro del jugador y su victoria
+      registro(victoria,jugador);
+      
     } else {
         return 0;
     }

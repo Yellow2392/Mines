@@ -33,12 +33,12 @@ Nivel2::Nivel2(){
 //4 minas para la forma triangular
   for (int i=0;i<4;i++){
     int randX=(rand() % 6);
-    int randY=(rand() % randX+1);
-    /*
+    int randY=(rand() % 6);
+
     if (randY>randX){
       randY=randX;
     }
-*/
+
     while (nivel2[randX][randY]=='*'){
       int randX=(rand() % 6);
       int randY=(rand() % 6);
