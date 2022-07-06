@@ -7,6 +7,7 @@ bool isValidPos(int i, int j, int X, int Y){
 
 void Tablero::asignar_a_valorCercano(int x, int y){
   if (isValidPos(x,y,X,Y)){
+    if (tablero[x][y]!='|'){
       int n=0;
     casillas--;
   if (isValidPos(x-1,y-1,X,Y)){
@@ -80,6 +81,7 @@ void Tablero::asignar_a_valorCercano(int x, int y){
       break;
     }
     }
+}
 }
 
 bool Tablero::elegir_casilla(int x, int y){

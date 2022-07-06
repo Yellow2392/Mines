@@ -1,6 +1,8 @@
 #include <iostream>
 #include "tablero.h"
 #include "nivel1.h"
+#include "nivel2.h"
+#include "nivel3.h"
 
 using namespace std;
 
@@ -10,16 +12,25 @@ int main() {
         cout<<endl<<"Menu - Juego Buscaminas"<<endl;
         cout<<"--------------------------------"<<endl;
         cout<<"1. Nivel1 = Principiante"<<endl;
+        cout<<"2. Nivel2 = Intermedio"<<endl;
+        cout<<"3. Nivel3 = Avanzado"<<endl;
+        cout<<"4. Perzonalizar nivel"<<endl;
         cout<<"--------------------------------"<<endl;
         cout<<"0. Salir del Juego"<<endl;
         cin>>result;
         cout<<"\n";
-    } while (result >= 2 or result <0);
+    } while (result >= 4 or result <0);
     if(result == 0){cout<<"Gracias por jugar!"; return 0;}
     Tablero* tablero=nullptr;
     switch(result){
         case 1:
             tablero = new Nivel1();
+            break;
+        case 2:
+            tablero = new Nivel2();
+            break;
+        case 3:
+            tablero = new Nivel3();
             break;
     }
     tablero ->print();
@@ -45,6 +56,8 @@ int main() {
         cin>>x1>>y1;
         cout<<endl;
         tablero->colocarBandera(x1,y1);
+        tablero -> print();
+        cout<<endl;
       }
       //End de la funcion
         cout<<"Ingrese la casilla que quiere buscar(fila, columna): ";
