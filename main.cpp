@@ -6,6 +6,7 @@
 #include <vector>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "tablero.h"
 #include "nivel1.h"
 #include "nivel2.h"
@@ -19,6 +20,10 @@
 using namespace std;
 
 int main() {
+
+
+
+
 
     int result;
     int selec;
@@ -74,14 +79,12 @@ int main() {
                     tablero = new NivelDiamante();
                     break;
             }
-            break;
         case 5:
             cout<<"_TABLE DE RESULTADOS_"<<endl;
             cout<<"----Los 5 mejores----"<<endl;
             cout<<"-------puntajes------"<<endl;
             mostrar_puntajes();
             return 0;
-            break;
         }
         int moves=0;
         cout<<"Ingrese su nombre (No debe contener espacios): ";
@@ -92,6 +95,10 @@ int main() {
         cout<<endl;
         tablero ->print();
         bool fail=false;
+        long int i=0;
+        double x;
+        clock_t comienzo;
+        comienzo=clock();
         while(tablero -> es_posible_elegir()){
 
             cout<<"\n"<<"Casillas restantes: "<<tablero->get_casillas()<<"\n";
@@ -143,10 +150,11 @@ int main() {
             //Registro del jugador y su victoria
             //registro(victoria,jugador);
             cout<<"Tu escore es: "<<moves<<endl;
-            cout<<"1creando archivo";
-            escribir(moves);
+            x=(clock()-comienzo)/(double)CLOCKS_PER_SEC;
+            escribir(x);
         } else {
-            escribir(moves);
+            x=(clock()-comienzo)/(double)CLOCKS_PER_SEC;
+            escribir(x);
             return 0;
         }
         return 0;
