@@ -1,7 +1,6 @@
 #include "tablero.h"
 bool isValidPos(int i, int j, int X, int Y){
-  if ((i>=0 && j>=0) && (i<=X && j<=Y))
-    return true;
+  if ((i>=0 && j>=0) && (i<X && j<Y)){return true;}
   return false;
   }
 
@@ -85,7 +84,7 @@ void Tablero::asignar_a_valorCercano(int x, int y){
 }
 
 bool Tablero::elegir_casilla(int x, int y){
-    if( x>=X || y >= Y) return false;
+    if( x>=X || y >= Y || x<0 || y<0) return false;
     if(tablero[x][y] == '0'){
         elegir(x,y);
         return true;

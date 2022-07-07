@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <algorithm>
 #include "tablero.h"
 #include "nivel1.h"
 #include "nivel2.h"
@@ -14,17 +15,12 @@
 #include "cruz.h"
 #include "diamante.h"
 #include "registros.h"
-
+#include "nivelP.h"
 
 
 using namespace std;
 
 int main() {
-
-
-
-
-
     int result;
     int selec;
     do{
@@ -71,6 +67,7 @@ int main() {
             switch (selec) {
                 case 1:
                     cout << "Escogio nivel perzonalizable!" << endl;
+                    tablero= new NivelP();
                     break;
                 case 2:
                     tablero = new NivelCruz();
@@ -79,19 +76,26 @@ int main() {
                     tablero = new NivelDiamante();
                     break;
             }
+            break;
         case 5:
             cout<<"_TABLE DE RESULTADOS_"<<endl;
             cout<<"----Los 5 mejores----"<<endl;
             cout<<"-------puntajes------"<<endl;
             mostrar_puntajes();
+            break;
             return 0;
         }
         int moves=0;
-        cout<<"Ingrese su nombre (No debe contener espacios): ";
+        cout<<"Ingrese su nombre (No debe contener comas): ";
         string jugador;
         int victoria=0;
         cin>>jugador;
-        //Agregar condicion para los espacios
+        //Si el jugador se hace el chistoso y coloca comas
+        //Se las borra
+        auto found = jugador.find(',');
+        if (found!=std::string::npos){
+          jugador.erase(std::remove(jugador.begin(), jugador.end(), ','), jugador.end());
+        }
         cout<<endl;
         tablero ->print();
         bool fail=false;
@@ -148,7 +152,7 @@ int main() {
             cout<<"!Felicidades, ha completado el juego"<<endl;
             victoria++;
             //Registro del jugador y su victoria
-            //registro(victoria,jugador);
+            registro(victoria,jugador);
             cout<<"Tu escore es: "<<moves<<endl;
             x=(clock()-comienzo)/(double)CLOCKS_PER_SEC;
             escribir(x);
