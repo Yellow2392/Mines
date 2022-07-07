@@ -16,7 +16,7 @@ void registro(int n, string jugador){
   //Se debe leer el archivo primero para verificar que el
   //el nombre no haya estado antes
   ifstream archivoOp("scores.txt");
-  string line,line1;
+  string line;
   bool flag=false;
   while (getline(archivoOp, line)) {
     auto found = line.find(jugador);
@@ -29,38 +29,45 @@ void registro(int n, string jugador){
   //Si se encontro el nombre del jugador, actualizara
   //el contador de victorias
   if (flag==true){
-    fstream archivo("scores.txt",fstream::app);
+    ifstream archivo("scores.txt");
     string line1;
-    while (!archivo.eof()){
-      std::getline(archivo,line1);
+    int score;
+    vector <string> data;
+    while (getline(archivo,line1)){
       auto found = line1.find(jugador);
       if (found!=std::string::npos){
-        //Error esta aca. No agrega elementos al vector
-        vector <string> words;
-        istringstream iss(line1);
-        do
-        {
-            string subs;
-            iss >> subs;
-            words.push_back(subs);
-        } while (iss);
-        words.pop_back();
-        for (auto &c:words){
-          cout<<c<<endl;
+        string temp="";
+        bool flag1=0;
+        for (int i=0;i<line1.size();i++){
+          if (line1[i]==','){
+            flag1=1;
+          }
+          if (flag1==1){
+            temp=temp+line1[i];
+          }
         }
-        int new_n = stoi(words[1]);
-        new_n=new_n+n;
-        string Sn=to_string(new_n);
-      line1.replace(line1.find(words[1]),words[1].length(),Sn);
+        temp.erase(temp.begin());
+        score=stoi(temp);
+      }
+      else{
+        data.push_back(line1);
       }
       
     }
     archivo.close();
+    score=score+1;
+    //Abre el archivo en modo de escritura para actualizarlo
+    ofstream archivoEd("scores.txt");
+    archivoEd<<jugador<<","<<to_string(score)<<endl;
+    for (auto &c:data){
+      archivoEd<<c<<endl;
+    }
+    archivoEd.close();
   }
   //Si no lo encuentra, registrara el nombre
   else{
     ofstream archivo("scores.txt",fstream::app);
-    archivo<<jugador<<" "<<n<<endl;
+    archivo<<jugador<<","<<n<<endl;
     archivo.close();
   }
   
@@ -94,30 +101,32 @@ int main() {
             tablero = new Nivel3();
             break;
         case 4: 
-              do{
-                  cout<<endl<<"Menu - Perzonalizado"<<endl;
-                  cout<<"--------------------------------"<<endl;
-                  cout<<"1. Perzonalizar Tamaño"<<endl;
-                  cout<<"2. Nivel Cruz"<<endl;
-                  cout<<"3. Nivel Diamante"<<endl;
-                  cout<<"--------------------------------"<<endl;
-                  cout<<"0. Salir del Juego"<<endl;
-                  cin>>selec;
-                  cout<<"\n";
-              } while (selec >= 4 or result <0);
-              if(selec==0){cout<<"Gracias por jugar!"; return 0;}
-              switch(selec){
-                  case 1:
-                      cout<<"Escogio nivel perzonalizable!"<<endl;
-                      break;
-                  case 2:
-                      tablero = new NivelCruz();
-                      break;
-                  case 3:
-                      tablero = new NivelDiamante();
-                      break;
-                 }             
-    cout<<"Ingrese su nombre (No debe contener espacios): ";
+            do{
+                cout<<endl<<"Menu - Perzonalizado"<<endl;
+                cout<<"--------------------------------"<<endl;
+                cout<<"1. Perzonalizar Tamaño"<<endl;
+                cout<<"2. Nivel Cruz"<<endl;
+                cout<<"3. Nivel Diamante"<<endl;
+                cout<<"--------------------------------"<<endl;
+                cout<<"0. Salir del Juego"<<endl;
+                cin>>selec;
+                cout<<"\n";
+            } while (selec >= 4 or result <0);
+            if(selec==0){cout<<"Gracias por jugar!"; return 0;}
+            switch(selec){
+                case 1:
+                    cout<<"Escogio nivel perzonalizable!"<<endl;                      break;
+                case 2:
+                    tablero = new NivelCruz();
+                    break;
+                case 3:
+                    tablero = new NivelDiamante();
+                    break;
+                }
+            break;
+      }
+          
+    cout<<"Ingrese su nombre (No debe contener comas): ";
     string jugador;
     int victoria=0;
     cin>>jugador;
@@ -168,7 +177,7 @@ int main() {
     }
     if(tablero->gano(fail)){
         cout<<"!Felicidades, ha completado el juego"<<endl;
-      victoria++;
+        victoria++;
       //Registro del jugador y su victoria
       registro(victoria,jugador);
       
@@ -177,4 +186,4 @@ int main() {
     }
     return 0;
 }
-  }
+

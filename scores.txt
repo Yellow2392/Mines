@@ -1,2 +1,3 @@
-Jorge 1
-Juan 1
+Juan,3
+Jorge,1
+Carlos,1
