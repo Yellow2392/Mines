@@ -70,7 +70,7 @@ void registro(int n, string jugador){
   
 }
 
-void escribir(int m){
+void escribir(double m){
     ofstream archivo("movimientos.txt",fstream::app);
     archivo<<m<<endl;
     archivo.close();
@@ -80,23 +80,22 @@ void mostrar_puntajes(){
 
     string filename("movimientos.txt");
     string line;
-    heap<int> h1;
-    int num;
+    heap<double> h1;
+    double num;
     ifstream input_file(filename);
     while (getline(input_file, line)){
-        num=stoi(line);
+
+        num=stod(line);
         h1.push(num);
     }
 
     int posicion=1;
     for(int i=0;i<5;i++){
-        cout<< posicion<<".      "<<h1.top()<<"     "<<endl;
+        cout<< posicion<<".     "<<h1.top()<<" seg"<<endl;
         h1.pop();
         posicion ++;
     }
-
     input_file.close();
-
 
 }
 
