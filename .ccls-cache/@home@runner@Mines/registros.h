@@ -10,57 +10,64 @@
 #define PROYECTOFINAL_REGISTROS_H
 
 void registro(int n, string jugador){
-    //Se debe leer el archivo primero para verificar que el
-    //el nombre no haya estado antes
-    ifstream archivoOp("scores.txt");
-    string line,line1;
-    bool flag=false;
-    while (getline(archivoOp, line)) {
-        auto found = line.find(jugador);
-        if (found!=std::string::npos){
-            flag=true;
-            break;
+  //Se debe leer el archivo primero para verificar que el
+  //el nombre no haya estado antes
+  ifstream archivoOp("scores.txt");
+  string line;
+  bool flag=false;
+  while (getline(archivoOp, line)) {
+    auto found = line.find(jugador);
+    if (found!=std::string::npos){
+      flag=true;
+      break;
+    }
+}
+  archivoOp.close();
+  //Si se encontro el nombre del jugador, actualizara
+  //el contador de victorias
+  if (flag==true){
+    ifstream archivo("scores.txt");
+    string line1;
+    int score;
+    vector <string> data;
+    while (getline(archivo,line1)){
+      auto found = line1.find(jugador);
+      if (found!=std::string::npos){
+        string temp="";
+        bool flag1=0;
+        for (int i=0;i<line1.size();i++){
+          if (line1[i]==','){
+            flag1=1;
+          }
+          if (flag1==1){
+            temp=temp+line1[i];
+          }
         }
+        temp.erase(temp.begin());
+        score=stoi(temp);
+      }
+      else{
+        data.push_back(line1);
+      }
+      
     }
-    archivoOp.close();
-    //Si se encontro el nombre del jugador, actualizara
-    //el contador de victorias
-    if (flag==true){
-        fstream archivo("scores.txt",fstream::app);
-        string line1;
-        while (!archivo.eof()){
-            std::getline(archivo,line1);
-            auto found = line1.find(jugador);
-            if (found!=std::string::npos){
-                //Error esta aca. No agrega elementos al vector
-                vector <string> words;
-                istringstream iss(line1);
-                do
-                {
-                    string subs;
-                    iss >> subs;
-                    words.push_back(subs);
-                } while (iss);
-                words.pop_back();
-                for (auto &c:words){
-                    cout<<c<<endl;
-                }
-                int new_n = stoi(words[1]);
-                new_n=new_n+n;
-                string Sn=to_string(new_n);
-                line1.replace(line1.find(words[1]),words[1].length(),Sn);
-            }
-
-        }
-        archivo.close();
+    archivo.close();
+    score=score+1;
+    //Abre el archivo en modo de escritura para actualizarlo
+    ofstream archivoEd("scores.txt");
+    archivoEd<<jugador<<","<<to_string(score)<<endl;
+    for (auto &c:data){
+      archivoEd<<c<<endl;
     }
-        //Si no lo encuentra, registrara el nombre
-    else{
-        ofstream archivo("scores.txt",fstream::app);
-        archivo<<jugador<<" "<<n<<endl;
-        archivo.close();
-    }
-
+    archivoEd.close();
+  }
+  //Si no lo encuentra, registrara el nombre
+  else{
+    ofstream archivo("scores.txt",fstream::app);
+    archivo<<jugador<<","<<n<<endl;
+    archivo.close();
+  }
+  
 }
 
 void escribir(int m){

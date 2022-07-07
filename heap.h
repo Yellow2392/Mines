@@ -43,7 +43,7 @@ index_t get_selected_child(Container cnt,index_t current_index){
 
 
 auto get_selected_child=[](const auto& cnt,index_t current_index,auto& cmp){
-    if(!has_right_child(current_index,std::size(cnt) - 1))
+    if(!has_right_child(current_index,cnt.size() - 1))
         return get_left_index(current_index);
     auto left_index= get_left_index(current_index);
     auto right_index= get_right_index( current_index);
@@ -76,7 +76,7 @@ void percolate_down(Container& cnt, index_t current_index,Compare& cmp) {
     auto selected_index = get_selected_child(cnt, current_index,cmp);
     //Condiciones Base
     // a. Si no tiene hijos se detiene
-    if (!has_children(current_index,std::size(cnt) -1)) return;
+    if (!has_children(current_index,cnt.size() -1)) return;
     // b. Si el valor actual es mayor que del hijo, detenerse
     //std::less<>cmp;
     if (cmp(cnt[selected_index],cnt[current_index])) return;
@@ -91,7 +91,7 @@ void percolate_down(Container& cnt, index_t current_index,Compare& cmp) {
 template<typename Container, typename Compare>
 void heapify(Container& cnt, Compare& cmp){
     // Ir al padre el ultimo
-    auto current_index = get_root_index(std::size(cnt) -1);
+    auto current_index = get_root_index(cnt.size() -1);
     while (current_index > 0) {
         percolate_down(cnt, current_index,cmp);
         --current_index; // Ir al anterior
@@ -108,20 +108,20 @@ class heap{
 public:
     heap():data(1){}
     explicit heap(Compare cmp):data(1),cmp(cmp){}
-    heap(std::initializer_list<T> lst): data(1+std::size(lst)){
+    heap(std::initializer_list<T> lst): data(1+lst.size()){
         //Copiar lista de inicialización
         copy(begin(lst),end(lst),next(begin(data)));
         //Generar el heap
         heapify(data,cmp);
     }
     T top() { return data[1]; }
-    bool empty() { return std::size(data)==1; }
-    int size() { return std::size(data) -1; }
+    bool empty() { return data.size()==1; }
+    int size() { return data.size() -1; }
     void push(T value) {
         // Insertar al final
         data.push_back(value);
         // Ejecutar el percolate up
-        percolate_up(data, std::size(data) -1,cmp);
+        percolate_up(data, data.size() -1,cmp);
     }
     void pop() {
         //Validación de vacío
@@ -147,7 +147,7 @@ public:
     template<typename ...Params>
     void emplace(Params ...params){
         data.emplace_back(params...);
-        percolate_down(data, std::size(data)-1,cmp);
+        percolate_down(data, data.size()-1,cmp);
     }
 
 

@@ -74,12 +74,14 @@ int main() {
                     tablero = new NivelDiamante();
                     break;
             }
+            break;
         case 5:
             cout<<"_TABLE DE RESULTADOS_"<<endl;
             cout<<"----Los 5 mejores----"<<endl;
             cout<<"-------puntajes------"<<endl;
             mostrar_puntajes();
             return 0;
+            break;
         }
         int moves=0;
         cout<<"Ingrese su nombre (No debe contener espacios): ";
