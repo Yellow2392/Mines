@@ -17,13 +17,52 @@ NivelDiamante::NivelDiamante(){
     }
   //Generar matriz para nivel
   char nivel1[9][9];
-  for(int i=0; i<X;i++){
-        for(int j=0; j<X;j++){
+  for(int i=0; i<=4;i++){
+      for(int j=0; j<=4;j++){
+        if(i+j==4||i+j==5||i+j==6||i+j==7||i+j==8) {
           nivel1[i][j]='0';
+        }
+        else{
+          nivel1[i][j]='|';
         }
     }
   }
 
+  for (int i=0;i<=4;i++){
+    for (int j=4;j<X;j++){
+      if(j<=i+4){
+        nivel1[i][j]='0';
+      }
+      else{
+        nivel1[i][j]='|';
+      }
+    }
+  }
+
+  for (int i=4;i<X;i++){
+    for (int j=0;j<=4;j++){
+      if(j>=i-4){
+        nivel1[i][j]='0';
+      }
+      else{
+        nivel1[i][j]='|';
+      }
+    }
+  }
+
+  for(int i=4; i<X;i++){
+      for(int j=4; j<X;j++){
+        if(i+j==12||i+j==11||i+j==10||i+j==9||i+j==8) {
+          nivel1[i][j]='0';
+        }
+        else{
+          nivel1[i][j]='|';
+        }
+    }
+  }
+
+  }
+  
 
 void NivelDiamante::print() {
     cout << "  1     2     3     4     5     6     7     8     9" << endl;

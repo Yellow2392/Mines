@@ -63,10 +63,10 @@ NivelCruz::NivelCruz(){
     for(int i=0; i<X;i++){
         for(int j=0; j<X;j++){
           if (j==X/2 || j==X/2+1 || j == X/2-1 ){
-            tablero1[i][j]='#';
+            tablero1[i][j]='0';
           }
           else if(i==X/2 || i==X/2+1 || i == X/2-1 ){
-            tablero1[i][j]='#';
+            tablero1[i][j]='0';
           }
           else{
             tablero1[i][j]='|';
