@@ -16,8 +16,9 @@ NivelP::NivelP(){
     int n_minas;
     cout<<"Ingresa el numero de minas (mayor que 0): "<<endl;
     cin>>n_minas;
-    if (n_minas<=0){n_minas=1;}
     casillas = X*Y;
+    if (n_minas<=0){n_minas=1;}
+    else if(n_minas>casillas){n_minas=casillas;}
     tablero=new char*[X];
     for(int i=0; i<X;i++){
         tablero[i] = new char[Y];
