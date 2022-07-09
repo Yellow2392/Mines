@@ -44,3 +44,19 @@ Si el jugador descubre todas las casillas sin mina (que se da en el caso en que 
 Para el desarrollo del proyecto, se emplearon las clases Tablero,Nivel1,Nivel2,Nivel3,NivelDiamante,NivelCruz,NivelP y Heap. La clase heap se utilizó como algoritmo de ordenamiento para los puntajes respecto al tiempo de juego de cada jugador. Las clases de niveles, heredan los atributos de la clase tablero e imprime el nivel solicitado por el usuario. La clase principal "tablero", se encarga de verificar la existencia de minas en el juego, si los movimientos realizados son válidos, si se desea colocar banderas y genera las minas aleatorias al momento de inicializar el programa.
 
 <img src="/Imagenes/Diagrama.png" alt="Logo"/>
+
+## Descripción de las funciones principales del programa:
+### int get_casillas(){return casillas;} :
+Retorna el número de casillas en el tablero
+### bool elegir(int x, int y) :
+Selecciona la casilla ingresada por el jugador(fila, columna) y en consola muestra que ha sido despejada.
+### bool es_posible_elegir() :
+Verifica que hayan "0" en la matriz tablero, lo cual indica que todavía hay casillas que no se han despejado.
+### bool casilla_mina(int x,int y);
+En caso la casilla seleccionada sea " * " igual a retorna un booleano que indica que en esa casilla hay una mina. 
+### bool isValidPos(int i, int j, int X, int Y);
+Verifica que la casilla introducida sea válida para el funcionamiento del juego.
+### void colocarBandera(int x, int y) :
+En caso el jugador decir colocar una bandera, se pinga en consola la casilla con la "P".
+### bool gano(bool f) :
+Verifica si el jugador ha ganado la partida.
