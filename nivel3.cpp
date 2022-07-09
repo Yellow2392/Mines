@@ -140,30 +140,3 @@ void Nivel3::print(){
     
 
 }
-
-
-
-/*
-void Nivel3::print(){
-    cout << "  1     2     3     4     5     6     7     8     9     10     11     12" << endl;
-    cout << "1 ";
-    cout << tablero1[0][0] <<"-----" << tablero1[0][1] << "-----" << tablero1[0][2] << "-----" << tablero1[0][3] << "-----" << tablero1[0][4] << "-----"<<tablero1[0][5]<<"-----" <<tablero1[0][6]<<"-----" <<tablero[0][7]<<"-----" <<tablero[0][8]<<"-----" <<tablero[0][9]<<"-----" <<tablero[0][10]<<"-----"<<tablero[0][11]<< endl;
-    cout << "  |     |     |     |     |     |     |     |     |     |     |     |" << endl;
-    cout << "2 ";
-    cout << tablero1[1][0]<<"-----" <<tablero1[1][1] << "-----" << tablero1[1][2] << "-----" << tablero1[1][3] << "-----" << tablero1[1][4] << "-----" << tablero1[1][5] << endl;
-    cout << "  |     |     |     |     |     |     |     |     |     |     |     |" << endl;
-    cout << "3 ";
-    cout << tablero1[2][0] << "-----" << tablero1[2][1] << "-----" << tablero1[2][2] << "-----" << tablero1[2][3] << "-----" << tablero1[2][4] << "-----" << tablero1[2][5] << endl;
-    cout << "  |     |     |     |     |     |     |     |     |     |     |     |" << endl;
-    cout << "4 ";
-    cout << tablero1[3][0] << "-----" << tablero1[3][1] << "-----" << tablero1[3][2] << "-----" << tablero1[3][3] << "-----" << tablero1[3][4] << "-----" << tablero1[3][5] <<  endl;
-    cout << "  |     |     |     |     |     |     |     |     |     |     |     |" << endl;
-    cout << "5 ";
-    cout << tablero1[4][0] << "-----" << tablero1[4][1] << "-----" << tablero1[4][2] << "-----" << tablero1[4][3] << "-----" << tablero1[4][4] << "-----" << tablero1[4][5] <<   endl;
-    cout << "  |     |     |     |     |     |     |     |     |     |     |     |     |" << endl;
-    cout << "6 ";
-    cout <<tablero1[5][0] << "-----" << tablero1[5][1] << "-----" << tablero1[5][2] << "-----" << tablero1[5][3] << "-----" << tablero1[5][4] << "-----" << tablero1[5][5] << endl;
-
-}
-
-*/
