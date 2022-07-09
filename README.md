@@ -2,6 +2,14 @@
 Buscaminas
 Proyecto de Programación 3
 
+## Objetivos:
+
+- Desarrollar un juego completo de Buscaminas con la opción de seleccionar diferentes niveles.
+- Implementar algoritmos de orden y búsqueda en arreglos.
+-  Desarrollar una interfaz cómoda e intuitiva en consola.
+-  Registrar los puntajes de los usuarios de acuerdo al tiempo de juego.
+ 
+
 ## Resumen del juego 
 Buscaminas es un videojuego de 1989 creado por Curt Johnson y Robert Donner. Este consiste de un tablero compuesto por casillas en las que el jugador deberá despejar todas las casillas, sin detonar las minas que están ocultas dentro de estas de manera aleatoria. Algunas de las casillas sin minas tienen un número, el cuál indica el número de minas que hay alrededor. Es decir, si se selecciona una casilla sin mina el cual muestra el número 1, esto quiere decir que hay una mina alrededor de esa casilla seleccionada.
 
