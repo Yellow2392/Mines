@@ -101,7 +101,7 @@ void heapify(Container& cnt, Compare& cmp){
 
 template<typename T,
         template <typename...> typename Container = std::vector,
-        typename Compare = less<T>>
+        typename Compare = greater<T>>
 class heap{
     Container<T> data;
     Compare cmp;

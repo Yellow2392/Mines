@@ -82,15 +82,13 @@ int main() {
             cout<<"----Los 5 mejores----"<<endl;
             cout<<"-------puntajes------"<<endl;
             mostrar_puntajes();
-            break;
             return 0;
         }
         int moves=0;
         cout<<"Ingrese su nombre (No debe contener comas): ";
         string jugador;
         cin>>jugador;
-        //Si el jugador se hace el chistoso y coloca comas
-        //Se las borra
+        //Si el jugador coloca comas se las borra
         auto found = jugador.find(',');
         if (found!=std::string::npos){
           jugador.erase(std::remove(jugador.begin(), jugador.end(), ','), jugador.end());

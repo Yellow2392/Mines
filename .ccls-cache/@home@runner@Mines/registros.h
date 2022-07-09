@@ -64,7 +64,7 @@ void registro(string jugador){
   //Si no lo encuentra, registrara el nombre
   else{
     ofstream archivo("scores.txt",fstream::app);
-    archivo<<jugador<<","<<n<<endl;
+    archivo<<jugador<<",1"<<endl;
     archivo.close();
   }
   

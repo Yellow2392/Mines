@@ -11,7 +11,7 @@
 bool isValidPos(int i, int j, int X, int Y);
 
 
-class Tablero {
+class Tablero{
 protected:
     int casillas = 0;
     char **tablero = nullptr;
