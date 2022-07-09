@@ -8,6 +8,9 @@ Proyecto de Programación 3
 - Implementar algoritmos de orden y búsqueda en arreglos.
 -  Desarrollar una interfaz cómoda e intuitiva en consola.
 -  Registrar los puntajes de los usuarios de acuerdo al tiempo de juego.
+
+##Librerías y/o componentes que se requieran:
+###Librería Estándar C++
  
 
 ## Resumen del juego 
