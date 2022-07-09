@@ -1,3 +1,5 @@
+<img src="/Imagenes/buscaminas.png" alt="Logo"/>
+
 # Mines
 
 Buscaminas
@@ -6,7 +8,7 @@ Proyecto de Programación 3
 ## Integrantes
 
 - Ruben Aaron Coorahua Peña (202110086)
--
+- Jorge Sebastian Tenorio Romero (202010411)
 
 ## Objetivos:
 
