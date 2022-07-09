@@ -41,7 +41,6 @@ Si el jugador descubre todas las casillas sin mina (que se da en el caso en que 
 
 ## Indicaciones
 - Al momento de correr el programa, el jugador tendra 5 opciones a digitar en consola: Nivel1, Nivel2, Nivel3, Perzonalizados y Ver Puntajes.
-- Dependiendo 
 - Inicialmente el programa tendra el archivo de movimientos.txt con un solo 0, para que si por primera vez el jugador solicite ver los Puntajes, le imprimira en consola 5 numeros 0.
 - De acuerdo al nivel que escoja el usuario, se imprimira un tablero con cada posición(fila, columna) marcada con un "#".
 - El jugador primera tendrá que eligir si desea o no colocar un banderín en alguna posición. Si elige que sí tendra que digitar la fila y columna, y esta la casilla se pintara con el simbolo "P". Si elige que no colocar el banderin, tendrá que elegir la posición a desmarcar en el tablero.
