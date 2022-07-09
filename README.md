@@ -36,7 +36,8 @@ El jugador podrá seleccionar cualquier casilla dentro del tablero y también te
 Si el jugador descubre todas las casillas sin mina (que se da en el caso en que la primera matriz ya no contenga ceros), gana la partida y se procederá a registrar su puntaje en movimientos.txt. Después, se registrará su nombre, el cuál sería preguntado antes de iniciar el juego, y su victoria dentro de otro archivo llamado scores.txt el cuál, si encuentra el nombre del jugador previamente, actualizará el contador de victorias de ese jugador.
 
 ## Resumen del programa
-[VIDEO RESUMEN]
+
+<a href="https://youtu.be/Cun2oEkYuQY" target="_blank">`Video Resumen`</a> 
 
 ## Indicaciones
 - Al momento de correr el programa, el jugador tendra 5 opciones a digitar en consola: Nivel1, Nivel2, Nivel3, Perzonalizados y Ver Puntajes.
