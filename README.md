@@ -60,3 +60,12 @@ Verifica que la casilla introducida sea válida para el funcionamiento del juego
 En caso el jugador decida colocar una bandera, se pinta en consola la casilla con la "P".
 ### bool gano(bool f) :
 Verifica si el jugador ha ganado la partida.
+
+## Equipo
+
+> Contribuyentes
+
+| <a target="_blank">**Aaron Coorahua**</a> | <a target="_blank">**Jorge Tenorio**</a> | 
+| :---: | :---:| 
+| ![Aaron](https://avatars.githubusercontent.com/u/83974253?v=4) | ![Jorge](https://avatars.githubusercontent.com/u/103154944?v=4) | 
+| <a href="https://github.com/AaronCoorahua" target="_blank">`github.com/AaronCoorahua`</a> | <a href="https://github.com/Yellow2392" target="_blank">`github.com/Yellow2392`</a> | 
