@@ -10,9 +10,10 @@ Proyecto de Programación 3
 -  Registrar los puntajes de los usuarios de acuerdo al tiempo de juego.
 
 ## Librerías y/o componentes que se requieran:
-### Librería Estándar C++
- 
+### Librería Estándar C++ :
 
+En C++, la biblioteca estándar es una colección de clases y funciones, escritas en el núcleo del lenguaje. La biblioteca estándar proporciona varios contenedores genéricos, funciones para utilizar y manipular esos contenedores, funciones objeto, cadenas y flujos genéricos (incluyendo E/S interactiva y de archivos) y soporte para la mayoría de las características del lenguaje. 
+ 
 ## Resumen del juego 
 Buscaminas es un videojuego de 1989 creado por Curt Johnson y Robert Donner. Este consiste de un tablero compuesto por casillas en las que el jugador deberá despejar todas las casillas, sin detonar las minas que están ocultas dentro de estas de manera aleatoria. Algunas de las casillas sin minas tienen un número, el cuál indica el número de minas que hay alrededor. Es decir, si se selecciona una casilla sin mina el cual muestra el número 1, esto quiere decir que hay una mina alrededor de esa casilla seleccionada.
 
