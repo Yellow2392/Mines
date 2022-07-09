@@ -71,4 +71,4 @@ Verifica si el jugador ha ganado la partida.
 | <a href="https://github.com/AaronCoorahua" target="_blank">`github.com/AaronCoorahua`</a> | <a href="https://github.com/Yellow2392" target="_blank">`github.com/Yellow2392`</a> | 
 
 ## Bibliografia
-"std::array - cppreference.com". cppreference.com. https://en.cppreference.com/w/cpp/container/array (accedido el 25 de junio de 2022).
+[1] "std::array - cppreference.com". cppreference.com. https://en.cppreference.com/w/cpp/container/array (accedido el 25 de junio de 2022).
