@@ -71,6 +71,15 @@ Verifica si el jugador ha ganado la partida.
 | <a href="https://github.com/AaronCoorahua" target="_blank">`github.com/AaronCoorahua`</a> | <a href="https://github.com/Yellow2392" target="_blank">`github.com/Yellow2392`</a> | 
 
 ## Bibliografia
-[1] "std::array - cppreference.com". cppreference.com. https://en.cppreference.com/w/cpp/container/array (accedido el 25 de junio de 2022).
 
-[2]  D. Agrawal. "How to remove all the occurrences of a char in c++ string". Stack Overflow. https://stackoverflow.com/questions/20326356/how-to-remove-all-the-occurrences-of-a-char-in-c-string (accedido el 9 de julio de 2022).
+[1] "std::array - cppreference.com". cppreference.com. https://en.cppreference.com/w/cpp/container/array (accedido el 22 de junio de 2022).
+
+[2] D. Agrawal. "How to remove all the occurrences of a char in c++ string". Stack Overflow. https://stackoverflow.com/questions/20326356/how-to-remove-all-the-occurrences-of-a-char-in-c-string (accedido el 24 de junio de 2022).
+
+[3] "string - C++ Reference". cplusplus.com - The C++ Resources Network. https://cplusplus.com/reference/string/string/ (accedido el 1 de julio de 2022).
+
+[4] "Usar algoritmos de almacenamiento dinámico STL en C++". Delft Stack. https://www.delftstack.com/es/howto/cpp/heap-in-cpp/ (accedido el 1 de julio de 2022).
+
+[5]  "Ficheros en C++". Fundamentos en Programacion en C++. https://www2.eii.uva.es/fund_inf/cpp/temas/10_ficheros/ficheros_cpp.html#:~:text=Para%20trabajar%20con%20ficheros%20en,ofstream%20(output%20file%20stream). (accedido el 2 de julio de 2022).
+
+[6] "Random number c++ in some range". Stack Overflow. https://stackoverflow.com/questions/7560114/random-number-c-in-some-range (accedido el 3 de julio de 2022).
