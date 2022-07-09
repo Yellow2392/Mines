@@ -72,3 +72,4 @@ Verifica si el jugador ha ganado la partida.
 
 ## Bibliografia
 [1] "std::array - cppreference.com". cppreference.com. https://en.cppreference.com/w/cpp/container/array (accedido el 25 de junio de 2022).
+[2]  D. Agrawal. "How to remove all the occurrences of a char in c++ string". Stack Overflow. https://stackoverflow.com/questions/20326356/how-to-remove-all-the-occurrences-of-a-char-in-c-string (accedido el 9 de julio de 2022).
