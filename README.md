@@ -39,3 +39,6 @@ Si el jugador descubre todas las casillas sin mina (que se da en el caso en que 
 - Al estilo del juego buscaminas, si la posición no contiene una mina, se desmarcarán las casillas alrededor. Si la casilla que se elige tiene una mina cerca, se desmarcará la casilla y se pintara con el número de minas a su alredor. Si la casilla contiene una mina, se imprimira la frase de "Perdiste".
 - El juego finaliza en 2 posibles escenarios. El primero es cuando la casilla elegida por el jugador contiene una mina, y el segundo, cuando el numero de casillas restantes, es igual al número de minas, lo que significa que haz ganado.
 - Una vez acaba el juego, el tiempo que haya durado la partida se registrará en el archivo "movimientos.txt", y podra consultarlo al correr nuevamente el programa y darle a la opción 5. 
+
+## Descripción de las funciones principales del programa:
+
