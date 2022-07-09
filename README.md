@@ -1,6 +1,12 @@
 # Mines
+
 Buscaminas
 Proyecto de Programación 3
+
+## Integrantes
+
+- Ruben Aaron Coorahua Peña (202110086)
+-
 
 ## Objetivos:
 
