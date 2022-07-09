@@ -19,11 +19,11 @@ Si el jugador descubre todas las casillas sin mina (que se da en el caso en que 
 [VIDEO RESUMEN]
 
 ## Indicaciones
-1. Al momento de correr el programa, el jugador tendra 5 opciones a digitar en consola: Nivel1, Nivel2, Nivel3, Perzonalizados y Ver Puntajes.
-2. Dependiendo 
-3. Inicialmente el programa tendra el archivo de movimientos.txt con un solo 0, para que si por primera vez el jugador solicite ver los Puntajes, le imprimira en consola 5 numeros 0.
-3. De acuerdo al nivel que escoja el usuario, se imprimira un tablero con cada posición(fila, columna) marcada con un "#".
-4. El jugador primera tendrá que eligir si desea o no colocar un banderín en alguna posición. Si elige que sí tendra que digitar la fila y columna, y esta la casilla se pintara con el simbolo "P". Si elige que no colocar el banderin, tendrá que elegir la posición a desmarcar en el tablero.
-5. Al estilo del juego buscaminas, si la posición no contiene una mina, se desmarcarán las casillas alrededor. Si la casilla que se elige tiene una mina cerca, se desmarcará la casilla y se pintara con el número de minas a su alredor. Si la casilla contiene una mina, se imprimira la frase de "Perdiste".
-6. El juego finaliza en 2 posibles escenarios. El primero es cuando la casilla elegida por el jugador contiene una mina, y el segundo, cuando el numero de casillas restantes, es igual al número de minas, lo que significa que haz ganado.
-7. Una vez acaba el juego, el tiempo que haya durado la partida se registrará en el archivo "movimientos.txt", y podra consultarlo al correr nuevamente el programa y darle a la opción 5. 
+- Al momento de correr el programa, el jugador tendra 5 opciones a digitar en consola: Nivel1, Nivel2, Nivel3, Perzonalizados y Ver Puntajes.
+- Dependiendo 
+- Inicialmente el programa tendra el archivo de movimientos.txt con un solo 0, para que si por primera vez el jugador solicite ver los Puntajes, le imprimira en consola 5 numeros 0.
+- De acuerdo al nivel que escoja el usuario, se imprimira un tablero con cada posición(fila, columna) marcada con un "#".
+- El jugador primera tendrá que eligir si desea o no colocar un banderín en alguna posición. Si elige que sí tendra que digitar la fila y columna, y esta la casilla se pintara con el simbolo "P". Si elige que no colocar el banderin, tendrá que elegir la posición a desmarcar en el tablero.
+- Al estilo del juego buscaminas, si la posición no contiene una mina, se desmarcarán las casillas alrededor. Si la casilla que se elige tiene una mina cerca, se desmarcará la casilla y se pintara con el número de minas a su alredor. Si la casilla contiene una mina, se imprimira la frase de "Perdiste".
+- El juego finaliza en 2 posibles escenarios. El primero es cuando la casilla elegida por el jugador contiene una mina, y el segundo, cuando el numero de casillas restantes, es igual al número de minas, lo que significa que haz ganado.
+- Una vez acaba el juego, el tiempo que haya durado la partida se registrará en el archivo "movimientos.txt", y podra consultarlo al correr nuevamente el programa y darle a la opción 5. 
