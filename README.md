@@ -57,6 +57,6 @@ En caso la casilla seleccionada sea " * " igual a retorna un booleano que indica
 ### bool isValidPos(int i, int j, int X, int Y);
 Verifica que la casilla introducida sea válida para el funcionamiento del juego.
 ### void colocarBandera(int x, int y) :
-En caso el jugador decir colocar una bandera, se pinga en consola la casilla con la "P".
+En caso el jugador decida colocar una bandera, se pinta en consola la casilla con la "P".
 ### bool gano(bool f) :
 Verifica si el jugador ha ganado la partida.
