@@ -8,7 +8,7 @@
 #include <cstdlib>
 
 
-bool isValidPos(int i, int j);
+bool isValidPos(int i, int j, int X, int Y);
 
 
 class Tablero {

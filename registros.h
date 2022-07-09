@@ -9,7 +9,7 @@
 #ifndef PROYECTOFINAL_REGISTROS_H
 #define PROYECTOFINAL_REGISTROS_H
 
-void registro(int n, string jugador){
+void registro(string jugador){
   //Se debe leer el archivo primero para verificar que el
   //el nombre no haya estado antes
   ifstream archivoOp("scores.txt");

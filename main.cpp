@@ -88,7 +88,6 @@ int main() {
         int moves=0;
         cout<<"Ingrese su nombre (No debe contener comas): ";
         string jugador;
-        int victoria=0;
         cin>>jugador;
         //Si el jugador se hace el chistoso y coloca comas
         //Se las borra
@@ -150,9 +149,8 @@ int main() {
         }
         if(tablero->gano(fail)){
             cout<<"!Felicidades, ha completado el juego"<<endl;
-            victoria++;
             //Registro del jugador y su victoria
-            registro(victoria,jugador);
+            registro(jugador);
             cout<<"Tu escore es: "<<moves<<endl;
             x=(clock()-comienzo)/(double)CLOCKS_PER_SEC;
             escribir(x);
