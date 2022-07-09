@@ -41,6 +41,6 @@ Si el jugador descubre todas las casillas sin mina (que se da en el caso en que 
 - Una vez acaba el juego, el tiempo que haya durado la partida se registrará en el archivo "movimientos.txt", y podra consultarlo al correr nuevamente el programa y darle a la opción 5. 
 
 ## Code insights
-Para el desarrollo del proyecto, se emplearon las clases Tablero,Nivel1,Nivel2,Nivel3,NivelDiamante,NivelCruz,NivelP y Heap. La clase heap se utilizó como algoritmo de ordenamiento para los puntajes respecto al tiempo de juego de cada jugador. Las clases de niveles, heredan los atributos de la clase tablero e imprime el nivel solicitado por el usuario. La clase principal "tablero", se encarga de verificar la existencia de minas en el juego, si los movimientos realizados son válidos, si se desea colocar banderas y genera las minas aleatorias al momento de inicializar el programa
+Para el desarrollo del proyecto, se emplearon las clases Tablero,Nivel1,Nivel2,Nivel3,NivelDiamante,NivelCruz,NivelP y Heap. La clase heap se utilizó como algoritmo de ordenamiento para los puntajes respecto al tiempo de juego de cada jugador. Las clases de niveles, heredan los atributos de la clase tablero e imprime el nivel solicitado por el usuario. La clase principal "tablero", se encarga de verificar la existencia de minas en el juego, si los movimientos realizados son válidos, si se desea colocar banderas y genera las minas aleatorias al momento de inicializar el programa.
 
 <img src="/Imagenes/Diagrama.png" alt="Logo"/>
