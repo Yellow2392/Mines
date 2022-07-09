@@ -9,8 +9,8 @@ Proyecto de Programación 3
 -  Desarrollar una interfaz cómoda e intuitiva en consola.
 -  Registrar los puntajes de los usuarios de acuerdo al tiempo de juego.
 
-##Librerías y/o componentes que se requieran:
-###Librería Estándar C++
+## Librerías y/o componentes que se requieran:
+### Librería Estándar C++
  
 
 ## Resumen del juego 
